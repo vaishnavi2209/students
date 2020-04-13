@@ -1,0 +1,13 @@
+{% extends "layout2.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<form action="" method="post">
+
+{% csrf_token %}
+<table>
+  {{ form |crispy }}
+</table>
+    <Button type="Submit" class="btn btn-primary"> Save </Button>
+
+</form>
+{% endblock %}

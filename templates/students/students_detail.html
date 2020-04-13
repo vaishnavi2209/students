@@ -1,0 +1,20 @@
+{% extends "layout2.html" %}
+{% block content %}
+
+    {{ students }}
+    <p> <strong> Admno:</strong> {{ students.admno }}</p>
+    <p> <strong> batchcode:</strong> {{ students.batchcode }}</p>
+    <p> <strong> rollno:</strong> {{ students.rollno }}</p>
+    <p> <strong> fullname:</strong> {{ students.fullname }}</p>
+    <p> <strong> fathername:</strong> {{ students.fathername }}</p>
+    <p> <strong> email:</strong> {{ students.email }}</p>
+    <p> <strong> phone:</strong> {{ students.phone }}</p>
+    <p> <strong> dj:</strong> {{ students.dj }}</p>
+
+    <a href="{% url 'update_students_detail' students.admno %}"> Update Details </a>
+	<br>
+	<a href="{% url 'delete_students_detail' students.admno %}"> Delete Details </a>
+	<br>
+	<a href="{% url 'students' %}"> Students list </a>
+
+{% endblock %}

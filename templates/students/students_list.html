@@ -1,0 +1,16 @@
+{% extends 'layout2.html'%}
+ {% block content %}
+ <h1>Students</h1>
+  <u1>
+  {% for students in students_list %}
+  <p>
+   <a href ="{% url 'students_detail' students.admno %}"> {{ students.admno }} ({{ students.fullname }})</a>
+  </p>
+  {% endfor %}
+   <br>
+     <a href="{% url 'add_students' %}">Add Students</a>
+
+   </ul>
+
+{% endblock %}
+

@@ -1,0 +1,13 @@
+
+{% block content %}
+<table>
+    <tr>
+        <th>Code</th><th>Name</th>
+    </tr>
+    {% for cr in courses %}
+    <tr>
+        <td>{{ cr.ccode }}</td><td>{{cr.name }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

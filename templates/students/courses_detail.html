@@ -1,0 +1,18 @@
+{% extends "layout2.html" %}
+{% block content %}
+
+    {{ courses }}
+    <p> <strong> ccode:</strong> {{ courses.ccode }}</p>
+    <p> <strong> cname:</strong> {{ courses.cname }}</p>
+    <p> <strong> course fees: </strong> {{ courses.coursesfees }}</p>
+    <p> <strong> duration: </strong> {{ courses.duration }}</p>
+    <p> <strong> prerequisites: </strong> {{ courses.prereq }}</p>
+
+    <a href="{% url 'update_courses_detail' courses.ccode %}"> Update Details </a>
+	<br>
+	<a href="{% url 'delete_courses_detail' courses.ccode %}"> Delete Details </a>
+	<br>
+	<a href="{% url 'courses' %}"> Courses list </a>
+
+
+{% endblock %}

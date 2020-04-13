@@ -1,0 +1,18 @@
+{% extends "layout2.html" %}
+{% block content %}
+
+    {{ batches }}
+    <p> <strong> batchcode:</strong> {{ batches.batchcode }}</p>
+    <p> <strong> ccode:</strong> {{ batches.ccode }}</p>
+    <p> <strong> stdate:</strong> {{ batches.stdate }}</p>
+    <p> <strong> enddate:</strong> {{ batches.enddate }}</p>
+    <p> <strong> timings:</strong> {{ batches.timings }}</p>
+
+    <a href="{% url 'update_batches_detail' batches.batchcode %}"> Update Details </a>
+	<br>
+	<a href="{% url 'delete_batches_detail' batches.batchcode %}"> Delete Details </a>
+	<br>
+	<a href="{% url 'batches' %}"> Batches list</a>
+
+
+{% endblock %}

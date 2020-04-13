@@ -1,0 +1,16 @@
+{% extends 'layout2.html'%}
+ {% block content %}
+ <h1>Courses</h1>
+  <u1>
+  {% for courses in courses_list %}
+  <p>
+  <a href ="{% url 'courses_detail' courses.ccode %}"> {{ courses.ccode }} ({{ courses.cname }})
+  </p>
+  {% endfor %}
+   <br>
+     <a href="{% url 'add_courses' %}">Add Courses</a>
+
+   </ul>
+
+{% endblock %}
+

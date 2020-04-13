@@ -1,0 +1,14 @@
+{% extends 'layout2.html'%}
+ {% block content %}
+ <h1>Payments</h1>
+<ul>
+ {% for payments in payments_list %}
+ <p>
+  <a href ="{% url 'payments_detail' payments.rpctno %}"> {{ payments.rpctno }} ({{ payments.amdno }})</a>
+ </p>
+ {% endfor %}
+ <br>
+ <a href="{% url 'add_payments' %}"> Add Payments </a>
+ </ul>
+ {% endblock %}
+

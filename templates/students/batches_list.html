@@ -1,0 +1,16 @@
+{% extends 'layout2.html'%}
+ {% block content %}
+ <h1>Batches</h1>
+  <u1>
+  {% for batches in batches_list %}
+  <p>
+   <a href ="{% url 'batches_detail' batches.batchcode %}"> {{ batches.batchcode }} </a>
+  </p>
+  {% endfor %}
+   <br>
+     <a href="{% url 'add_batches' %}">Add Batches</a>
+
+   </ul>
+
+{% endblock %}
+

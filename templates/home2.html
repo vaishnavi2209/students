@@ -1,0 +1,19 @@
+{% extends 'layout2.html'%}
+{% block content%}
+
+    <H3> Student Course Maintanance </h3>
+
+<ul>
+<li> <h4> <a href="{% url 'home' %}"> home</a> </h4></li>
+
+<li> <h4> <a href="{% url 'batches' %}"> batches </a></h4></li>
+
+<li> <h4> <a href="{% url 'courses' %}"> courses </a></h4></li>
+
+<li> <h4> <a href="{% url 'students' %}"> students </a></h4></li>
+
+<li> <h4> <a href="{% url 'payments' %}"> payments </a></h4></li>
+
+</ul>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "layout2.html" %}
+{% block content %}
+
+    {{ payments }}
+    <p> <strong> rpctno:</strong> {{ payments.rpctno }}</p>
+    <p> <strong> amdno:</strong> {{ payments.amdno }}</p>
+    <p> <strong> amount:</strong> {{ payments.amount }}</p>
+    <p> <strong> paydate:</strong> {{ payments.paydate }}</p>
+    <p> <strong> remarks:</strong> {{ payments.remarks }}</p>
+    
+
+    <a href="{% url 'update_payments_detail' payments.rpctno %}"> Update Details </a>
+	<br>
+	<a href="{% url 'delete_payments_detail' payments.rpctno %}"> Delete Details </a>
+	<br>
+	<a href="{% url 'payments' %}"> Payments list </a>
+
+{% endblock %}
